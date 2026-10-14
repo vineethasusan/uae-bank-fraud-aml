@@ -1,0 +1,103 @@
+{
+  "fraud": {
+    "roc_auc": 0.9986,
+    "pr_auc": 0.9307,
+    "test_transactions": 289939,
+    "fraud_rate": 0.00082,
+    "model": {
+      "alerts": 901,
+      "fraud_caught": 230,
+      "fraud_total": 237,
+      "fraud_value_caught_aed": 975708,
+      "fraud_value_missed_aed": 55594,
+      "precision": 0.255,
+      "total_cost_aed": 78119
+    },
+    "rules_baseline": {
+      "alerts": 1272,
+      "fraud_caught": 112,
+      "fraud_total": 237,
+      "fraud_value_caught_aed": 601086,
+      "fraud_value_missed_aed": 430216,
+      "precision": 0.088,
+      "total_cost_aed": 462016
+    },
+    "no_action": {
+      "alerts": 0,
+      "fraud_caught": 0,
+      "fraud_total": 237,
+      "fraud_value_caught_aed": 0,
+      "fraud_value_missed_aed": 1031302,
+      "precision": 0.0,
+      "total_cost_aed": 1031302
+    },
+    "detection_rate_by_fraud_type": {
+      "account_takeover": 1.0,
+      "card_testing": 1.0,
+      "merchant_collusion": 0.8,
+      "skimming": 1.0
+    }
+  },
+  "aml_scenario_coverage": [
+    {
+      "typology": "high_risk_corridor",
+      "customers": 20,
+      "detected_by_any_scenario": 20,
+      "coverage": 1.0
+    },
+    {
+      "typology": "money_mule",
+      "customers": 23,
+      "detected_by_any_scenario": 22,
+      "coverage": 0.957
+    },
+    {
+      "typology": "rapid_pass_through",
+      "customers": 16,
+      "detected_by_any_scenario": 16,
+      "coverage": 1.0
+    },
+    {
+      "typology": "structuring",
+      "customers": 20,
+      "detected_by_any_scenario": 20,
+      "coverage": 1.0
+    }
+  ],
+  "aml_scenario_precision": [
+    {
+      "scenario_name": "Fan-in / money mule",
+      "alerts": 39,
+      "precision": 0.564
+    },
+    {
+      "scenario_name": "High-risk corridor",
+      "alerts": 48,
+      "precision": 0.417
+    },
+    {
+      "scenario_name": "Income mismatch",
+      "alerts": 1536,
+      "precision": 0.043
+    },
+    {
+      "scenario_name": "Rapid pass-through",
+      "alerts": 50,
+      "precision": 0.32
+    },
+    {
+      "scenario_name": "Structuring",
+      "alerts": 52,
+      "precision": 0.385
+    }
+  ],
+  "aml_triage": {
+    "alerts_test": 771,
+    "truly_suspicious": 64,
+    "false_positive_rate_of_rules": 0.917,
+    "suspicious_found_in_top_20pct": 0.953,
+    "alerts_to_review_for_90pct_recall": 125,
+    "workload_reduction_at_90pct_recall": 0.838
+  },
+  "runtime_s": 78
+}
